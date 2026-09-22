@@ -11,8 +11,8 @@ declare global {
   }
 }
 
-const WIDGET_ID = '36656f6a7169353831363833'
-const TOKEN_AUTH = '487718TSNBEKe6ff16ab2745eP1'
+const WIDGET_ID = process.env.NEXT_PUBLIC_MSG91_WIDGET_ID || ''
+const TOKEN_AUTH = process.env.NEXT_PUBLIC_MSG91_TOKEN_AUTH || ''
 
 const accessTokenFrom = (data: any) =>
   data?.accessToken ?? data?.access_token ?? data?.token ?? data?.data?.accessToken ?? data?.data?.access_token ?? null
