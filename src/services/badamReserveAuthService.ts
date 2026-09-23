@@ -1,5 +1,5 @@
 const SUPABASE_FUNCTION_URL =
-  import.meta.env.VITE_SUPABASE_FUNCTION_URL ||
+  process.env.NEXT_PUBLIC_SUPABASE_FUNCTION_URL ||
   'https://tzzzltezvwxrqgthglsu.supabase.co/functions/v1'
 
 const AUTH_SESSION_URL = `${SUPABASE_FUNCTION_URL.replace(/\/$/, '')}/auth-session`
